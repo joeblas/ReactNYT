@@ -1,15 +1,13 @@
 import axios from "axios";
 
-// export default {     getArticles : () => {         let url =
-// "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=88f3ac516e674ae08
-// e86616cfde941e7";         // const apiKey =
-// "88f3ac516e674ae08e86616cfde941e7";         return axios.get(url);     } }
-
 const apiKey = "88f3ac516e674ae08e86616cfde941e7";
 
 const helpers = {
     runQuery: (searchTerm) => {
-        const url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + apiKey + "&q=" + searchTerm;
+        const url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" 
+        + apiKey 
+        + "&q=" 
+        + searchTerm;
 
         return axios
             .get(url)
@@ -29,7 +27,7 @@ const helpers = {
 
     saveArticle: (articleTitle, articleDate, articleURL) => {
 
-        console.log(`Article Tite: ${articleTitle}`);
+        console.log(`Article Title: ${articleTitle}`);
         console.log(`Article Date: ${articleDate}`);
 
         return axios.post('/api/saved', {

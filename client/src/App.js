@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from "react-dom";
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Main from './components/Main';
 
@@ -7,6 +6,6 @@ const App = () =>
     
     <Router>
       <Route path='/' component={Main} />
-    </Router>;
+    </Router>
 
 export default App;

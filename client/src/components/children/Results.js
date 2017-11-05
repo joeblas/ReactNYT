@@ -14,7 +14,7 @@ class Results extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleSubmit(event, index, headline, pubdate, url) {
-        event.preventDefault();
+       
         console.log(`Headline of the article to be saved: ${headline}`);
         const newState = this.state.article;
         newState.title = headline;
@@ -38,7 +38,9 @@ class Results extends Component {
                         return (
                             <div key={index} 
                             className="row resultsRow" 
-                            onClick={() => this.handleSubmit(index, obj.headline.main, obj.pub_date, obj.web_url)}>
+                            onClick={(e) => {
+                                e.preventDefault();
+                                this.handleSubmit(index, obj.headline.main, obj.pub_date, obj.web_url)}}>
                             <div className="col-sm-6 articleText">
                                 <a href={obj.web_url}>{obj.headline.main}</a>
                             </div>

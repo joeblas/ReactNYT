@@ -50,7 +50,7 @@ componentDidUpdate(prevProps, prevState) {
         helpers
             .runQuery(this.state.searchTerm)
             .then((data) => {
-                if (data != this.state.results) {
+                if (data !== this.state.results) {
                     console.log(`Here's the data ${data[0].headline.main}`);
 
                     this.setState({results: data});

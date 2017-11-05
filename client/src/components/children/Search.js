@@ -3,9 +3,6 @@ import Query from './Query';
 import Results from './Results';
 
 class Search extends Component {
-    constructor(props){
-        super(props);
-    }
 
     render(){
         return (
