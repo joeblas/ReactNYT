@@ -94,6 +94,15 @@ setArticleToSave(index, article) {
         });
 }
 
+removeArticle(articleID, index){
+    
+    helpers.removeArticle(articleID).then(() => {
+        this.setState((prevState) => ({
+            saved: [...prevState.saved.slice(0, index), ...prevState.saved.slice(index+1)]
+        }));
+    })
+}
+
 render() {
     return (
         <div className="container">

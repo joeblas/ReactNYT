@@ -13,7 +13,7 @@ class Results extends Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    handleSubmit(index, headline, pubdate, url) {
+    handleSubmit(event, index, headline, pubdate, url) {
         event.preventDefault();
         console.log(`Headline of the article to be saved: ${headline}`);
         const newState = this.state.article;

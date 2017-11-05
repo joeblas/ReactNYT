@@ -7,7 +7,7 @@ class Query extends Component {
             term: ""
         };
         this.handleChange = this.handleChange.bind(this);
-        this.handSubmit = this.handSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChange(event){
         let newState = {};
@@ -17,7 +17,7 @@ class Query extends Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(`Submit clicked`);
-        console.log(`Searching for ${this.state.term}`);
+        // console.log(`Searching for ${this.state.term}`);
         this.props.setTerm(this.state.term);
         this.setState({ term: "" });
     }
